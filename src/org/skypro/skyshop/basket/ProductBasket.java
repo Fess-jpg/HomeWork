@@ -21,24 +21,20 @@ public class ProductBasket {
         }
     }
 
-    public int getTotalCost() {
-        int totalCost = 0;
-        for (int i = 0; i < count; i++) {
-            totalCost += products[i].getProductPrice();
-        }
-        return totalCost;
-    }
-
-    public void printContents() {
+    public int printContents() {
         if (count == 0) {
             System.out.println(" в корзине пусто ");
         } else {
+            int totalCost = 0;
             for (int i = 0; i < count; i++) {
-                System.out.println(products[i].getNameProduct() + ":" + products[i].getProductPrice());
+                System.out.println(products[i]);
+                totalCost += products[i].getProductPrice();
             }
-            System.out.println("  Итого :" + getTotalCost());
+            System.out.println("  Итого :" + totalCost);
 
         }
+        return count;
+
     }
 
     public boolean checkingByName(String productName) {

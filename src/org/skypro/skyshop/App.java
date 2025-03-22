@@ -46,7 +46,7 @@ public class App {
         basket4.addProduct(tea);
         basket4.clear();
         basket4.printContents();
-        int emptyBasketCost = basket4.getTotalCost();
+        int emptyBasketCost = basket4.printContents();
         System.out.println("стоимость корзины: " + emptyBasketCost);
         String newProduct3 = "Хлеб";
         boolean found3 = basket4.checkingByName(newProduct3);
