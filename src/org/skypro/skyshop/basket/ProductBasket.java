@@ -26,15 +26,18 @@ public class ProductBasket {
             System.out.println(" в корзине пусто ");
         } else {
             int totalCost = 0;
+            int specialCount = 0;
             for (int i = 0; i < count; i++) {
                 System.out.println(products[i]);
                 totalCost += products[i].getProductPrice();
+                if (products[i].isSpecial()) {
+                    specialCount++;
+                }
             }
-            System.out.println("  Итого :" + totalCost);
-
+            System.out.println("Итого: " + totalCost);
+            System.out.println("Специальных товаров: " + specialCount);
         }
         return count;
-
     }
 
     public boolean checkingByName(String productName) {
@@ -53,6 +56,7 @@ public class ProductBasket {
         count = 0;
     }
 }
+
 
 
 
