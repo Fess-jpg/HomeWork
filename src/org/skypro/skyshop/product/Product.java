@@ -1,4 +1,4 @@
-package org.skypro.skyshop;
+package org.skypro.skyshop.product;
 
 abstract public class Product {
     private String nameProduct;
