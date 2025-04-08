@@ -1,6 +1,6 @@
 package org.skypro.skyshop.product;
 
-public class FixPriceProduct extends Product {
+public class FixPriceProduct extends Product  {
 
     private static final int FIXED_PRICE = 1000;
 
@@ -20,5 +20,10 @@ public class FixPriceProduct extends Product {
 
     public boolean isSpecial() {
         return true;
+    }
+
+    @Override
+    public String getSearchTerm() {
+        return super.getSearchTerm();
     }
 }
